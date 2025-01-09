@@ -13,6 +13,18 @@ import java.sql.ResultSet;
 public class EditarLibro extends HttpServlet {
 
     // Maneja la solicitud GET para cargar el libro a editar
+    /**
+     * Mètode doGet per gestionar les sol·licituds GET del servlet.
+     *
+     * @param request  l'objecte HttpServletRequest que conté la sol·licitud del client
+     * @param response l'objecte HttpServletResponse que conté la resposta del servlet
+     * @throws ServletException si ocorre un error específic del servlet
+     * @throws IOException      si ocorre un error d'entrada/sortida
+     *
+     * Aquest mètode obté l'identificador del llibre de la sol·licitud, consulta la base de dades
+     * per obtenir les dades del llibre corresponent i estableix aquests valors com a atributs
+     * de la sol·licitud. Si el llibre no es troba, retorna un error 404.
+     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int idLibro = Integer.parseInt(request.getParameter("id"));
 
@@ -40,6 +52,14 @@ public class EditarLibro extends HttpServlet {
     }
 
     // Maneja la solicitud POST para actualizar los datos del libro
+    /**
+     * Processa les sol·licituds POST per actualitzar la informació d'un llibre a la base de dades.
+     *
+     * @param request  l'objecte HttpServletRequest que conté la sol·licitud del client
+     * @param response l'objecte HttpServletResponse que conté la resposta del servidor
+     * @throws ServletException si ocorre un error específic del servlet
+     * @throws IOException      si ocorre un error d'entrada/sortida
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int idLibro = Integer.parseInt(request.getParameter("id"));
         String titol = request.getParameter("titol");

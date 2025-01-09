@@ -3,6 +3,7 @@
 <%@ page import="java.util.*" %>
 
 <%
+    // Obtenim el missatge d'error de la sol·licitud, si n'hi ha
     String errorMessage = (String) request.getAttribute("error");
 %>
 

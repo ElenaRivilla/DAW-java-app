@@ -12,6 +12,14 @@ import java.util.logging.Logger;
 
 @WebServlet("/insertarLibro")
 public class InsertarLibro extends HttpServlet {
+    /**
+     * Gestiona les peticions POST per inserir un nou llibre a la base de dades.
+     *
+     * @param request  l'objecte HttpServletRequest que conté la petició del client
+     * @param response l'objecte HttpServletResponse que conté la resposta del servidor
+     * @throws ServletException si ocorre un error específic del servlet
+     * @throws IOException      si ocorre un error d'entrada/sortida
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String titol = request.getParameter("titol");
         String isbn = request.getParameter("isbn");

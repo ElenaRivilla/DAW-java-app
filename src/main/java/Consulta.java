@@ -17,6 +17,18 @@ import java.util.Map;
 public class Consulta extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
+    /**
+     * Mètode doGet per gestionar les sol·licituds GET del client.
+     *
+     * @param request  l'objecte HttpServletRequest que conté la sol·licitud del client
+     * @param response l'objecte HttpServletResponse que conté la resposta del servidor
+     * @throws ServletException si ocorre un error específic del servlet
+     * @throws IOException      si ocorre un error d'entrada/sortida
+     *
+     * Aquest mètode estableix una connexió amb la base de dades, executa una consulta SQL per obtenir informació
+     * sobre llibres, autors i editorials, i passa els resultats a un JSP per a la seva visualització.
+     * En cas d'error, envia una resposta d'error al client.
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Connection conn = null;
