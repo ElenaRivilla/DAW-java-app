@@ -3,6 +3,10 @@ import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
 import java.sql.Connection;
 
+/**
+ * AppInitializer és una classe que implementa ServletContextListener per gestionar
+ * la inicialització i destrucció del context de l'aplicació.
+ */
 @WebListener
 public class AppInitializer implements ServletContextListener {
     

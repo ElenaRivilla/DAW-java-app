@@ -1,4 +1,3 @@
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -9,6 +8,29 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+/**
+ * Servlet implementation class EditarLibro.
+ * 
+ * Aquest servlet gestiona les sol·licituds per editar un llibre existent a la base de dades.
+ * Proporciona funcionalitats per carregar les dades d'un llibre per a la seva edició (mètode doGet)
+ * i per actualitzar les dades del llibre a la base de dades (mètode doPost).
+ * 
+ * <p>
+ * El mètode doGet obté l'identificador del llibre de la sol·licitud, consulta la base de dades
+ * per obtenir les dades del llibre corresponent i estableix aquests valors com a atributs
+ * de la sol·licitud. Si el llibre no es troba, retorna un error 404.
+ * </p>
+ * 
+ * <p>
+ * El mètode doPost processa les sol·licituds per actualitzar la informació d'un llibre a la base de dades.
+ * Obté els nous valors dels paràmetres de la sol·licitud, actualitza el registre corresponent a la base de dades
+ * i redirigeix a la pàgina de consulta de llibres. Si l'actualització no té èxit, mostra un missatge d'error.
+ * </p>
+ * 
+ * @see jakarta.servlet.http.HttpServlet
+ * @see jakarta.servlet.http.HttpServletRequest
+ * @see jakarta.servlet.http.HttpServletResponse
+ */
 @WebServlet("/editarLibro")
 public class EditarLibro extends HttpServlet {
 
