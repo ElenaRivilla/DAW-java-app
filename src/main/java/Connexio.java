@@ -2,6 +2,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * La classe Connexio proporciona una manera de connectar-se a una base de dades MariaDB.
+ * Utilitza el controlador MariaDB per establir la connexió.
+ */
 public class Connexio {
     private static final String URL = "jdbc:mariadb://localhost:3306/llibres"; // accedint des de xampp
     // private static final String URL = "jdbc:mariadb://192.168.1.50:3303/llibres"; per si vols accedir des de la màquina virtual amb una ip

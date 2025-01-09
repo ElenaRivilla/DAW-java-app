@@ -10,6 +10,15 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Aquest servlet gestiona les peticions POST per inserir un nou llibre a la base de dades.
+ * 
+ * Aquest servlet rep les dades del llibre a inserir a través dels paràmetres de la petició HTTP POST,
+ * crea una connexió a la base de dades i executa una instrucció SQL per inserir el nou llibre.
+ * Si la inserció és exitosa, redirigeix l'usuari a la pàgina de consulta. En cas contrari, envia un error.
+ * 
+ * @see jakarta.servlet.http.HttpServlet
+ */
 @WebServlet("/insertarLibro")
 public class InsertarLibro extends HttpServlet {
     /**

@@ -10,6 +10,10 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * BorrarLibro és una classe Servlet que gestiona les sol·licituds per esborrar un llibre de la base de dades.
+ * Aquesta classe respon a les sol·licituds GET enviades a la URL "/borrarLibro".
+ */
 @WebServlet("/borrarLibro")
 public class BorrarLibro extends HttpServlet {
     /**
@@ -18,7 +22,7 @@ public class BorrarLibro extends HttpServlet {
      * @param request  l'objecte HttpServletRequest que conté la sol·licitud del client
      * @param response l'objecte HttpServletResponse que conté la resposta del servidor
      * @throws ServletException si ocorre un error específic del servlet
-     * @throws IOException      si ocorre un error d'entrada/sortida
+     * @throws IOException si ocorre un error d'entrada/sortida
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int idLibro = Integer.parseInt(request.getParameter("id"));

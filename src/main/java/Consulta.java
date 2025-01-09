@@ -13,6 +13,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Servlet implementation class Consulta
+ *
+ * Aquest servlet gestiona les sol·licituds GET per obtenir informació sobre llibres, autors i editorials
+ * des d'una base de dades i passar els resultats a un JSP per a la seva visualització.
+ *
+ * @author Helen
+ */
 @WebServlet("/Consulta") // URL para acceder al servlet
 public class Consulta extends HttpServlet {
     private static final long serialVersionUID = 1L;
